@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 // import App from './App.vue'
-import App from './components/03.style/App.vue'
+import App from './components/04.props/App.vue'
 import './index.css'
 
 import Swiper from './components/01.globalReg/Swiper.vue'
