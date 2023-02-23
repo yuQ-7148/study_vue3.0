@@ -24,4 +24,16 @@ export default {
 p {
     color: red;
 }
+
+div {
+    background-color: yellow;
+
+    :deep(p) {
+        color: goldenrod;
+    }
+}
+
+:deep(.title) {
+    color: cyan;
+}
 </style>
