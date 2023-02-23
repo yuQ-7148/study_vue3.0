@@ -13,9 +13,7 @@
   <hr>
 
   <MySwiper></MySwiper>
-  <my-swiper></my-swiper>
   <MyTest></MyTest>
-  <my-test></my-test>
 
   <hr>
 
