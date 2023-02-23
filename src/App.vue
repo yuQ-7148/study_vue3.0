@@ -9,9 +9,21 @@
 
   <h3>{{ count }}</h3>
   <button @click="addCount()">+1</button>
+
+  <hr>
+
+  <MySwiper></MySwiper>
+  <my-swiper></my-swiper>
+  <MyTest></MyTest>
+  <my-test></my-test>
+
+  <hr>
+
+  <my-search></my-search>
 </template>
 
 <script>
+import Search from './components/02.privateReg/Search.vue'
 
 export default {
   name: 'MyApp',
@@ -25,6 +37,9 @@ export default {
     addCount() {
       this.count += 1
     }
+  },
+  components: {
+    'my-search': Search
   }
 }
 </script>
