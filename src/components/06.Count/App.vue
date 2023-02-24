@@ -1,11 +1,14 @@
 <template>
     <div>
         <my-count  :state="state"></my-count>
+        <my-counter></my-counter>
     </div>
 </template>
 
 <script>
 import MyCount from './Count.vue'
+import MyCounter from './MyCounter.vue'
+
 export default {
     name: 'MyApp',
     data() {
@@ -15,7 +18,8 @@ export default {
         }
     },
     components: {
-        MyCount
+        MyCount,
+        MyCounter
     }
 }
 </script>
