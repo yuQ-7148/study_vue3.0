@@ -3,4 +3,5 @@
 - npm init vite-app 项目名称
 - cd 项目名称
 - npm install
+- npm i less -D
 - npm run dev
