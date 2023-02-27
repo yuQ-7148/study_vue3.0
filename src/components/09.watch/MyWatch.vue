@@ -11,14 +11,22 @@ export default {
     name: 'MyWatch',
     data() {
         return {
-            username: ''
+            username: 'admin'
         }
     },
     watch: {
-        async username(newVal, oldVal) {
-            console.log(newVal, oldVal)
-            const { data: res } = await axios.get('https://www.escook.cn./api/finduser/' + newVal)
-            console.log(res)
+        // async username(newVal, oldVal) {
+        //     console.log(newVal, oldVal)
+        //     const { data: res } = await axios.get('https://www.escook.cn./api/finduser/' + newVal)
+        //     console.log(res)
+        // }
+        username: {
+            async handler(newVal, oldVal) {
+                console.log(newVal, oldVal);
+                const { data: res } = await axios.get('https://www.escook.cn./api/finduser/' + newVal)
+                console.log(res);
+            },
+            immediate: true
         }
     }
 }
