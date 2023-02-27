@@ -1,6 +1,6 @@
 <template>
     <div>
-        <input type="text" v-model.trim="username">
+        <input type="text" v-model.trim="info.username">
     </div>
 </template>
 
@@ -11,7 +11,10 @@ export default {
     name: 'MyWatch',
     data() {
         return {
-            username: 'admin'
+            username: 'admin',
+            info: {
+                username: 'zs'
+            }
         }
     },
     watch: {
@@ -20,13 +23,20 @@ export default {
         //     const { data: res } = await axios.get('https://www.escook.cn./api/finduser/' + newVal)
         //     console.log(res)
         // }
-        username: {
+        // username: {
+        //     async handler(newVal, oldVal) {
+        //         console.log(newVal, oldVal);
+        //         const { data: res } = await axios.get('https://www.escook.cn./api/finduser/' + newVal)
+        //         console.log(res);
+        //     },
+        //     immediate: true
+        // }
+        info: {
             async handler(newVal, oldVal) {
-                console.log(newVal, oldVal);
-                const { data: res } = await axios.get('https://www.escook.cn./api/finduser/' + newVal)
+                const { data: res } = await axios.get('https://www.escook.cn./api/finduser/' + newVal.username)
                 console.log(res);
             },
-            immediate: true
+            deep: true
         }
     }
 }
