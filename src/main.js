@@ -7,14 +7,22 @@ import { createApp } from 'vue'
 // import App from './components/09.watch/App.vue'
 // import App from './components/10.life-cycle/App.vue'
 // import App from './components/11.brother/App.vue'
-import App from './components/12.provide&injict/App.vue'
+// import App from './components/12.provide&injict/App.vue'
+import App from './components/13.network/App.vue'
 import './index.css'
-
-import Swiper from './components/01.globalReg/Swiper.vue'
-import Test from './components/01.globalReg/Test.vue'
+import axios from 'axios'
 
 const app = createApp(App)
+
+axios.defaults.baseURL = 'https://www.escook.cn'
+app.config.globalProperties.$http = axios
+
 app.mount('#app')
 
+
+
+//全局注册组件
+import Swiper from './components/01.globalReg/Swiper.vue'
+import Test from './components/01.globalReg/Test.vue'
 app.component(Swiper.name, Swiper)
 app.component('MyTest', Test)
