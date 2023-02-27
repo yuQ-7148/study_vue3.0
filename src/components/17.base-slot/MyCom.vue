@@ -1,10 +1,10 @@
 <template>
     <div>
-        <p>第一个</p>
-        <slot>
-            <p>后备内容</p>
-        </slot>
-        <p>最后一个</p>
+        <slot name="header"></slot>
+        <hr>
+        <slot></slot>
+        <hr>
+        <slot name="footer"></slot>
     </div>
 </template>
 
