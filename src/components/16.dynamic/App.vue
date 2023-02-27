@@ -2,7 +2,9 @@
     <div>
         <button @click="comName = 'MyHome'">Home</button>
         <button @click="comName = 'MyMovie'">Movie</button>
-        <component :is="comName"></component>
+        <keep-alive>
+            <component :is="comName"></component>
+        </keep-alive>
     </div>
 </template>
 
