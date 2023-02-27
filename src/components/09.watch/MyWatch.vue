@@ -13,7 +13,8 @@ export default {
         return {
             username: 'admin',
             info: {
-                username: 'zs'
+                username: 'zs',
+                age: 20
             }
         }
     },
@@ -31,12 +32,20 @@ export default {
         //     },
         //     immediate: true
         // }
-        info: {
+        // info: {
+        //     async handler(newVal, oldVal) {
+        //         console.log(newVal);
+        //         const { data: res } = await axios.get('https://www.escook.cn./api/finduser/' + newVal.username)
+        //         console.log(res);
+        //     },
+        //     deep: true
+        // }
+        'info.username': {
             async handler(newVal, oldVal) {
-                const { data: res } = await axios.get('https://www.escook.cn./api/finduser/' + newVal.username)
+                console.log(newVal);
+                const { data: res } = await axios.get('https://www.escook.cn./api/finduser/' + newVal)
                 console.log(res);
-            },
-            deep: true
+            }
         }
     }
 }
