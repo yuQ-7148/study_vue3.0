@@ -1,3 +1,9 @@
+import './assets/css/bootstrap.css'
+import './index.css'
+import axios from 'axios'
+import router from './components/20.vue-router/router.js'
+
+
 import { createApp } from 'vue'
 // import App from './App.vue'
 // import App from './components/05.class&style/App.vue'
@@ -11,16 +17,12 @@ import { createApp } from 'vue'
 // import App from './components/13.network/App.vue'
 // import App from './components/14.ref/App.vue'
 // import App from './components/15.$nextTick/App.vue'
-import App from './components/19.router/App.vue'
-
-
-
-import './assets/css/bootstrap.css'
-import './index.css'
-import axios from 'axios'
+import App from './components/20.vue-router/App.vue'
 
 const app = createApp(App)
 
+
+app.use(router)
 axios.defaults.baseURL = 'https://www.escook.cn'
 app.config.globalProperties.$http = axios
 
