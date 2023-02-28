@@ -1,6 +1,7 @@
 <template>
     <div>
-       <h3>MyHome</h3>
+        <h3>MyHome</h3>
+        <router-link :to="{ name: 'mov', params: { id: 2 } }">go to movie</router-link>
     </div>
 </template>
 
@@ -11,7 +12,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-h3{
+h3 {
     color: red;
 }
 </style>
