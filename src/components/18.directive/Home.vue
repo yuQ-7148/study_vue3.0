@@ -8,13 +8,13 @@
 <script>
 export default {
     name: 'MyHome',
-    directives: {
-        focus: {
-            mounted(el) {
-                el.focus()
-            }
-        }
-    }
+    // directives: {
+    //     focus: {
+    //         mounted(el) {
+    //             el.focus()
+    //         }
+    //     }
+    // }
 }
 </script>
 
