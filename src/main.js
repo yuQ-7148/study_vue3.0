@@ -23,11 +23,16 @@ const app = createApp(App)
 axios.defaults.baseURL = 'https://www.escook.cn'
 app.config.globalProperties.$http = axios
 
-app.directive('focus', {
-    mounted(el) {
-        el.focus()
-    }
-})
+// app.directive('focus', {
+//     mounted(el) {
+//         el.focus()
+//     },
+//     updated(el) {
+//         el.focus()
+//     }
+// })
+
+// app.directive('focus', (el) => { el.focus() })
 
 app.mount('#app')
 

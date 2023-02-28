@@ -1,20 +1,22 @@
 <template>
     <div>
-       <h3>MyHome</h3>
-       <input type="text" v-focus>
+        <h3>MyHome--{{ count }}</h3>
+        <input type="text" v-focus>
+        <button @click="count++">+1</button>
     </div>
 </template>
 
 <script>
 export default {
     name: 'MyHome',
-    // directives: {
-    //     focus: {
-    //         mounted(el) {
-    //             el.focus()
-    //         }
-    //     }
-    // }
+    data() {
+        return {
+            count: 0
+        }
+    },
+    directives: {
+        focus: (el) => { el.focus() }
+    }
 }
 </script>
 
