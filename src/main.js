@@ -11,7 +11,7 @@ import { createApp } from 'vue'
 // import App from './components/13.network/App.vue'
 // import App from './components/14.ref/App.vue'
 // import App from './components/15.$nextTick/App.vue'
-import App from './components/18.directive/App.vue'
+import App from './components/19.router/App.vue'
 
 
 
