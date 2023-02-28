@@ -15,6 +15,7 @@ import App from './components/18.directive/App.vue'
 
 
 
+import './assets/css/bootstrap.css'
 import './index.css'
 import axios from 'axios'
 
