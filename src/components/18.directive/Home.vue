@@ -1,7 +1,8 @@
 <template>
     <div>
-        <h3>MyHome--{{ count }}</h3>
-        <input type="text" v-focus>
+        <h3 v-color="'red'">MyHome--{{ count }}</h3>
+        <p v-color="'red'">test</p>
+        <input type="text" v-focus v-color="'cyan'">
         <button @click="count++">+1</button>
     </div>
 </template>
@@ -15,7 +16,8 @@ export default {
         }
     },
     directives: {
-        focus: (el) => { el.focus() }
+        focus: (el) => { el.focus() },
+        color: (el, binding) => { el.style.color = binding.value }
     }
 }
 </script>

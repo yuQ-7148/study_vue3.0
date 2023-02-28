@@ -33,6 +33,7 @@ app.config.globalProperties.$http = axios
 // })
 
 // app.directive('focus', (el) => { el.focus() })
+// app.directive('color', (el, binding) => { el.style.color = binding.value })
 
 app.mount('#app')
 
