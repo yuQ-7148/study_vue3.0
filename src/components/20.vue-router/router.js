@@ -13,6 +13,7 @@ const router = createRouter({
     routes: [
         { path: '/', redirect: '/home' },
         { path: '/home', component: MyHome },
+        { path: '/movie', component: MyMovie, props: true },
         { name: 'mov', path: '/movie/:id', component: MyMovie, props: true },
         {
             path: '/about',
@@ -24,6 +25,25 @@ const router = createRouter({
             ]
         },
     ]
+})
+
+// router.beforeEach((to, from, next) => {
+//     console.log(from.path);
+//     if(to.path === '/movie/2'){
+//         next('/home')
+//     }else{
+//         next()
+//     }
+// })
+
+router.beforeEach((to, from, next) => {
+    const token = localStorage.getItem('token')
+    console.log(token);
+    if (to.path === '/about/tab2' && !token) {
+        next('/home')
+    } else {
+        next()
+    }
 })
 
 export default router
