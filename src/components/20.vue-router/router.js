@@ -6,6 +6,7 @@ import MyAbout from './MyAbout.vue'
 
 const router = createRouter({
     history: createWebHashHistory(),
+    linkActiveClass: 'router-active',
     routes: [
         { path: '/', redirect: '/home' },
         { path: '/home', component: MyHome },
