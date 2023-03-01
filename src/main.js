@@ -23,8 +23,38 @@ import { createApp } from 'vue'
 // import App from './components/15.$nextTick/App.vue'
 import App from './components/20.vue-router/App.vue'
 
+
+import { createStore } from 'vuex'
+
+const store = createStore({
+    state() {
+        return {
+            count: 0
+        }
+    },
+    mutations: {
+        addN(state, step) {
+            state.count += step
+        }
+    },
+    actions: {
+        addAsync(context, step) {
+            setTimeout(() => {
+                context.commit('addN', step)
+            }, 1000)
+        }
+    },
+    getters: {
+        showNum: state => {
+            return '数据是：' + state.count
+        }
+    }
+})
+
+
 const app = createApp(App)
 
+app.use(store)
 app.use(ElementPlus)
 app.use(router)
 axios.defaults.baseURL = 'https://www.escook.cn'

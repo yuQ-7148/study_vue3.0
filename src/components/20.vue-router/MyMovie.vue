@@ -4,6 +4,10 @@
         <h3>MyMovie---{{ id }}</h3>
         <button @click="gotoMovie(3)">go to movie3</button>
         <button @click="goback(-1)">后退</button>
+
+        <hr>
+        <h3>{{ $store.state.count }}</h3>
+
     </div>
 </template>
 
