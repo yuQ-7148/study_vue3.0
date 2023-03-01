@@ -3,6 +3,10 @@ import './index.css'
 import axios from 'axios'
 import router from './components/20.vue-router/router.js'
 
+import ElementPlus from 'element-plus'
+import 'element-plus/dist/index.css'
+
+
 
 import { createApp } from 'vue'
 // import App from './App.vue'
@@ -21,9 +25,17 @@ import App from './components/20.vue-router/App.vue'
 
 const app = createApp(App)
 
-
+app.use(ElementPlus)
 app.use(router)
 axios.defaults.baseURL = 'https://www.escook.cn'
+
+
+axios.interceptors.request.use(config => {
+    console.log(config);
+    config.headers.Authorization = 'Bearer xxx'
+    return config
+})
+
 app.config.globalProperties.$http = axios
 
 // app.directive('focus', {

@@ -2,6 +2,7 @@
     <div>
         <h3>MyHome</h3>
         <router-link :to="{ name: 'mov', params: { id: 2 } }">go to movie</router-link>
+        <el-button type="danger">Danger</el-button>
     </div>
 </template>
 
